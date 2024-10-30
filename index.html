@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Showcasing my web development skills to create clean, responsive, and interactive websites."
+    />
+    <title>Web Design Services</title>
+    <!-- Tailwind CSS and DaisyUI -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.0.0/dist/full.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body
+    class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-sans"
+  >
+    <!-- Sticky Header -->
+    <header
+      class="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-blue-500 to-indigo-600 dark:bg-gray-800 shadow-lg"
+    >
+      <nav class="flex justify-between items-center p-4">
+        <h1 class="text-2xl font-bold text-white">My Web Design</h1>
+        <button id="menu-btn" class="md:hidden block">
+          <svg
+            class="w-8 h-8 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+        <ul id="menu" class="hidden md:flex gap-6">
+          <li>
+            <a
+              href="#about"
+              class="text-indigo-500 sm:text-indigo-100 hover:text-rose-200 transition-colors"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#services"
+              class="text-indigo-500 sm:text-indigo-100 hover:text-rose-200 transition-colors"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="text-indigo-500 sm:text-indigo-100 hover:text-rose-200 transition-colors"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section with Parallax -->
+    <section
+      class="parallax flex items-center justify-center text-center text-white"
+    >
+      <div class="bg-black bg-opacity-50 p-10 rounded-md">
+        <h2 class="text-4xl font-bold mb-4">Single-Page Web Design</h2>
+        <p class="mb-6">
+          Your vision, realized. I create responsive and interactive websites
+          that captivate your audience.
+        </p>
+        <a href="#contact" class="btn btn-primary px-4 py-2">Get Started</a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-8 md:px-16">
+      <div class="text-center">
+        <h3 class="text-3xl font-semibold mb-4">About This Page</h3>
+        <p class="mb-8">
+          This is a static, single-page web design, where all content is on one
+          page. The benefit of this desgin is: streamlined navigation, faster
+          loading times, and a more focused user experience. It allows for easy
+          updates and a cohesive flow, making it ideal for showcasing specific
+          information or promoting a product.
+        </p>
+        <div class="flex flex-col md:flex-row gap-8">
+          <div
+            class="flex-1 bg-white shadow-lg p-6 rounded-lg dark:bg-gray-800"
+          >
+            <h4 class="text-xl font-semibold">Responsive Design</h4>
+            <p>
+              My designs are mobile-first, ensuring your website looks great on
+              any device.
+            </p>
+          </div>
+          <div
+            class="flex-1 bg-white shadow-lg p-6 rounded-lg dark:bg-gray-800"
+          >
+            <h4 class="text-xl font-semibold">Interactive UI</h4>
+            <p>
+              From smooth animations to interactive elements, I ensure your
+              users are engaged.
+            </p>
+          </div>
+          <div
+            class="flex-1 bg-white shadow-lg p-6 rounded-lg dark:bg-gray-800"
+          >
+            <h4 class="text-xl font-semibold">Minimalistic & Clean</h4>
+            <p>
+              I believe in clean and minimalistic design, making sure every
+              element has a purpose.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section with Tabs -->
+    <section
+      id="services"
+      class="py-16 px-8 md:px-16 bg-gray-100 dark:bg-gray-800"
+    >
+      <div class="text-center mb-8">
+        <h3 class="text-3xl font-semibold">Services</h3>
+      </div>
+      <div class="tabs flex justify-between items-center p-4">
+        <a
+          class="tab tab-bordered active text-blue-500 bg-indigo-200 hover:bg-blue-500 hover:text-rose-200"
+          data-tab="tab1"
+          >Design</a
+        >
+        <a
+          class="tab tab-bordered active text-blue-500 bg-indigo-200 hover:bg-blue-500 hover:text-rose-200"
+          data-tab="tab2"
+          >UI/UX</a
+        >
+        <a
+          class="tab tab-bordered active text-blue-500 bg-indigo-200 hover:bg-blue-500 hover:text-rose-200"
+          data-tab="tab3"
+          >SEO</a
+        >
+      </div>
+      <div id="tab1" class="tab-content mt-6">
+        <p>
+          I create visually stunning and fully responsive websites that help you
+          stand out.
+        </p>
+      </div>
+      <div id="tab2" class="tab-content hidden mt-6">
+        <p>
+          Intuitive, user-centered design for an exceptional digital experience.
+        </p>
+      </div>
+      <div id="tab3" class="tab-content hidden mt-6">
+        <p>
+          Boost your website's visibility with effective search engine
+          optimization.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Section with Modal -->
+    <section id="contact" class="py-16 px-8 md:px-16">
+      <div class="text-center mb-8">
+        <h3 class="text-3xl font-semibold">Get in Touch</h3>
+        <p class="mb-4">
+          I'd love to work with you! Let's discuss your project.
+        </p>
+        <button id="contact-modal-btn" class="btn btn-primary">
+          Contact Me
+        </button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 bg-gray-200 dark:bg-gray-800 text-center">
+      <p>Made with ♥ by Cal © 2024</p>
+    </footer>
+
+    <!-- Modals -->
+    <div
+      id="contact-modal"
+      class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
+    >
+      <div class="bg-white p-8 rounded-lg max-w-md w-full dark:bg-gray-800">
+        <h4 class="text-2xl mb-4">Contact Me</h4>
+        <h4 class="text-1xl mb-1">
+          [Note: this form is for presentation purposes only]
+        </h4>
+        <form id="contact-form">
+          <input
+            type="text"
+            placeholder="Your Name"
+            class="input input-bordered w-full mb-4"
+            required
+          />
+          <input
+            type="email"
+            placeholder="Your Email"
+            class="input input-bordered w-full mb-4"
+            required
+          />
+          <textarea
+            placeholder="Your Message"
+            class="textarea textarea-bordered w-full mb-4"
+          ></textarea>
+          <button type="submit" class="btn btn-primary w-full">
+            Send Message
+          </button>
+        </form>
+        <button id="close-modal" class="btn btn-outline mt-4 w-full">
+          Close
+        </button>
+      </div>
+    </div>
+
+    <!-- Smooth Scroll, Dark Mode, and Modal Handling Script -->
+    <script src="script.js"></script>
+  </body>
+</html>

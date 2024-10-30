@@ -1,0 +1,205 @@
+/* General Styles */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Header Styles */
+header {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+}
+
+nav a {
+  padding: 10px 15px;
+  font-weight: 600;
+}
+
+/* Hero Section */
+.parallax {
+  background-image: url('mountainscene-3282739451.jpeg'); /* Example image */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 50vh;
+}
+
+/* Section Styles */
+section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* About Section */
+#about {
+  background-color: #f9f9f9; /* Light background */
+  border-radius: 8px;
+}
+
+#about p {
+  margin: 0 auto 20px;
+  max-width: 800px;
+}
+
+/* Services Section */
+#services {
+  background-color: #e9ecef; /* Slightly darker background */
+}
+
+.tabs {
+  margin: 40px;
+}
+
+.tab {
+  padding: 1px 50px;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+/* Existing hover styles */
+.tab:hover {
+  background-color:#007BFF;
+  color:white;
+}
+
+/* Apply hover styles to the active tab */
+.tab.active {
+  background-color: rgba(0, 0, 0, 0.1); /* Match the hover background */
+  color: #000000; /* Change text color to rose when active */
+}
+
+.tab-bordered {
+  border: 1px solid #ddd;
+}
+
+.tab-content {
+  text-align: center;
+  padding: 10px;
+  border-radius: 6px;
+  background-color:rgba(29, 78, 216, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Section */
+#contact button {
+  margin-top: 20px;
+}
+
+/* Modal Styles */
+#contact-modal {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#contact-modal h4 {
+  margin-bottom: 20px;
+}
+
+/* Button Styles */
+.btn {
+  background-color: #007BFF; /* Bootstrap primary color */
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid #007BFF; /* Bootstrap primary color */
+  color: #007BFF;
+}
+
+.btn-outline:hover {
+  background-color: #007BFF; /* Bootstrap primary color */
+  color: white;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #f1f1f1; /* Light footer */
+  padding: 20px 0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .tabs {
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  nav ul {
+      display: none; /* Initially hidden for mobile */
+      flex-direction: column;
+      background: rgba(255, 255, 255, 0.9); /* Light background for dropdown */
+      position: absolute;
+      top: 60px; /* Below header */
+      width: 100%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  nav ul.show {
+      display: flex; /* Show on toggle */
+  }
+
+  #menu-btn {
+      display: block; /* Show menu button */
+  }
+}
+
+/* Dark Mode Styles */
+@media (prefers-color-scheme: dark) {
+  body {
+      background-color: #1a1a1a;
+      color: #e0e0e0;
+  }
+
+  header {
+      background: linear-gradient(to right, #2a2a2a, #383838);
+  }
+
+  section {
+      background-color: #292929;
+      color: #e0e0e0;
+  }
+
+  footer {
+      background-color: #2b2b2b;
+  }
+
+  .btn {
+      background-color: #3a3a3a;
+  }
+
+  .btn:hover {
+      background-color: #5c5c5c;
+  }
+}
