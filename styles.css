@@ -239,3 +239,36 @@ footer {
     background-color: rgba(79, 70, 229, 0.2);
   }
 }
+/* Scroll to Top Button Styles */
+.scroll-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  background-color: #007BFF; /* Button color */
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 1000;
+}
+
+.scroll-to-top:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-3px); /* Slight lift effect */
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.5);
+}
+
+.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}

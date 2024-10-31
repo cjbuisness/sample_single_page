@@ -54,4 +54,26 @@ document.getElementById("menu-btn").addEventListener("click", function () {
     this.reset();
     document.getElementById("contact-modal").classList.add("hidden");
   });
+  // Get the button element
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+// Show or hide the button based on scroll position
+window.onscroll = function () {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    scrollToTopBtn.classList.remove("hidden");
+    scrollToTopBtn.classList.add("visible");
+  } else {
+    scrollToTopBtn.classList.remove("visible");
+    scrollToTopBtn.classList.add("hidden");
+  }
+};
+
+// Scroll to the top when the button is clicked
+scrollToTopBtn.onclick = function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+};
+
   
