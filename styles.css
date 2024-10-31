@@ -65,7 +65,11 @@ section {
 }
 
 .tabs {
-  margin: 40px;
+  margin: 20px 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem; /* Space between tabs */
 }
 
 .tab {
@@ -77,14 +81,17 @@ section {
 
 /* Existing hover styles */
 .tab:hover {
-  background-color:#007BFF;
-  color:white;
+  background-color: #007BFF;
+  color: white;
+  transform: translateY(-3px); /* Slight lift effect */
 }
 
 /* Apply hover styles to the active tab */
 .tab.active {
-  background-color: rgba(0, 0, 0, 0.1); /* Match the hover background */
-  color: #000000; /* Change text color to rose when active */
+  background-color: #3b82f6; /* Change to a more vibrant blue */
+  color: white; /* White text for contrast */
+  transform: scale(1.05); /* Slightly enlarge active tab */
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2); /* Add shadow for depth */
 }
 
 .tab-bordered {
@@ -93,10 +100,22 @@ section {
 
 .tab-content {
   text-align: center;
-  padding: 10px;
-  border-radius: 6px;
-  background-color:rgba(29, 78, 216, 0.1);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  background-color: rgba(29, 78, 216, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  margin-top: 20px;
+  animation: fadeIn 0.4s ease-in-out; /* Fade in animation */
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Contact Section */
@@ -152,8 +171,12 @@ footer {
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .tabs {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tab {
+    width: 80%;
   }
   
   nav ul {
@@ -201,5 +224,18 @@ footer {
 
   .btn:hover {
       background-color: #5c5c5c;
+  }
+  .tab {
+    background-color: #2b2b2b;
+    color: #e0e0e0;
+  }
+
+  .tab.active {
+    background-color: #4f46e5; /* More vibrant active tab */
+    color: white;
+  }
+
+  .tab-content {
+    background-color: rgba(79, 70, 229, 0.2);
   }
 }
