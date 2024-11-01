@@ -1,3 +1,4 @@
+
 // Toggle Menu
 document.getElementById("menu-btn").addEventListener("click", function () {
     const menu = document.getElementById("menu");
@@ -55,25 +56,22 @@ document.getElementById("menu-btn").addEventListener("click", function () {
     document.getElementById("contact-modal").classList.add("hidden");
   });
   // Get the button element
-const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
-// Show or hide the button based on scroll position
-window.onscroll = function () {
-  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-    scrollToTopBtn.classList.remove("hidden");
-    scrollToTopBtn.classList.add("visible");
-  } else {
-    scrollToTopBtn.classList.remove("visible");
-    scrollToTopBtn.classList.add("hidden");
-  }
-};
+  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
-// Scroll to the top when the button is clicked
-scrollToTopBtn.onclick = function () {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
+  // Show the button when the user scrolls down 200px from the top
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      scrollToTopBtn.classList.add("show");
+    } else {
+      scrollToTopBtn.classList.remove("show");
+    }
   });
-};
-
   
+  // Scroll to top when the button is clicked
+  scrollToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });

@@ -43,25 +43,32 @@
             ></path>
           </svg>
         </button>
-        <ul id="menu" class="md:flex gap-10">
+        <ul id="menu" class="hidden md:flex gap-4">
+          <li>
+            <a
+              href="#home"
+              class="text-indigo-500 sm:text-indigo-100 hover:text-rose-200 transition-colors"
+              >Home</a
+            >
+          </li>
           <li>
             <a
               href="#about"
-              class="text-lg text-indigo-400 hover:text-rose-200 transition-colors"
+              class="text-indigo-500 sm:text-indigo-100 hover:text-rose-200 transition-colors"
               >About</a
             >
           </li>
           <li>
             <a
               href="#services"
-              class="text-lg text-indigo-400 hover:text-rose-200 transition-colors"
+              class="text-indigo-500 sm:text-indigo-100 hover:text-rose-200 transition-colors"
               >Services</a
             >
           </li>
           <li>
             <a
               href="#contact"
-              class="text-lg text-indigo-400 hover:text-rose-200 transition-colors"
+              class="text-indigo-500 sm:text-indigo-100 hover:text-rose-200 transition-colors"
               >Contact</a
             >
           </li>
@@ -71,6 +78,7 @@
 
     <!-- Hero Section with Parallax -->
     <section
+      id="home"
       class="parallax flex items-center justify-center text-center text-white"
     >
       <div class="bg-black bg-opacity-50 p-10 rounded-md">
@@ -224,9 +232,12 @@
         </button>
       </div>
     </div>
-
-    <!-- Smooth Scroll, Dark Mode, and Modal Handling Script -->
-    <button id="scrollToTopBtn" class="scroll-to-top hidden">↑</button>
+    <button
+      id="scrollToTopBtn"
+      class="fixed bottom-4 right-4 p-4 bg-blue-500 dark:bg-blue-500 text-white dark:text-white rounded-full shadow-lg hidden"
+    >
+      ↑
+    </button>
     <script src="script.js"></script>
   </body>
 </html>
