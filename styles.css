@@ -196,12 +196,16 @@ footer {
   #menu-btn {
       display: block; /* Show menu button */
   }
+
+  #menu {
+    display:flex;
+  }
 }
 
 /* Dark Mode Styles */
 @media (prefers-color-scheme: dark) {
   body {
-      background-color: #1a1a1a;
+      background-color: #efefef;
       color: #e0e0e0;
   }
 
@@ -210,33 +214,90 @@ footer {
   }
 
   section {
-      background-color: #292929;
+      background-color: #e7e2e2;
       color: #e0e0e0;
+  }
+  #about {
+    background-color: #f9f9f9; /* Light background */
+    border-radius: 8px;
+  }
+  
+  #about p {
+    margin: 0 auto 20px;
+    max-width: 800px;
+  }
+  
+  /* Services Section */
+  #services {
+    background-color: #e9ecef; /* Slightly darker background */
   }
 
   footer {
-      background-color: #2b2b2b;
+    background-color: #f1f1f1; /* Dark footer */
+  }
+  h1 {
+    color: #ffffff
+  }
+  h2, h3, a, p {
+    color: #333333; /* Use same color in dark mode */
   }
 
   .btn {
-      background-color: #3a3a3a;
-  }
-
-  .btn:hover {
-      background-color: #5c5c5c;
-  }
-  .tab {
-    background-color: #2b2b2b;
-    color: #e0e0e0;
-  }
-
-  .tab.active {
-    background-color: #4f46e5; /* More vibrant active tab */
+    background-color: #007BFF; /* Bootstrap primary color */
+    border: none;
+    border-radius: 4px;
     color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
   }
-
+  
+  .btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05);
+  }
+  .tabs {
+    margin: 20px 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem; /* Space between tabs */
+  }
+  
+  .tab {
+    padding: 1px 50px;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+  }
+  
+  /* Existing hover styles */
+  .tab:hover {
+    background-color: #007BFF;
+    color: white;
+    transform: translateY(-3px); /* Slight lift effect */
+  }
+  
+  /* Apply hover styles to the active tab */
+  .tab.active {
+    background-color: #3b82f6; /* Change to a more vibrant blue */
+    color: white; /* White text for contrast */
+    transform: scale(1.05); /* Slightly enlarge active tab */
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2); /* Add shadow for depth */
+  }
+  
+  .tab-bordered {
+    border: 1px solid #ddd;
+  }
+  
   .tab-content {
-    background-color: rgba(79, 70, 229, 0.2);
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: rgba(29, 78, 216, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    margin-top: 20px;
+    animation: fadeIn 0.4s ease-in-out; /* Fade in animation */
   }
 }
 /* Scroll to Top Button Styles */
